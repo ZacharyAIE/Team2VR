@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-
     public class PlanetList : MonoBehaviour
     {
+
         public List<Planet> planetList;
     }
 }

@@ -7,7 +7,7 @@ namespace CharacterComparison
     public enum Restriction
     {
         Disaster,
-        Criminal,
+        Piracy,
         Conflict,
         Restricted
     }

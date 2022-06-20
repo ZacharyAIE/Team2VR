@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 623fa0f1e864a054ca3d55bb347f79fa, type: 3}
-  m_Name: New Planet
+  m_Name: Gazorpazorp
   m_EditorClassIdentifier: 
   planetName: Gazorpazorp
   restrictionAmount: 2

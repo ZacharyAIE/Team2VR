@@ -13,11 +13,11 @@ namespace CharacterComparison
         Diplomatic
     }
 
-    [CreateAssetMenu(menuName = "Character/Create Visa")]
+    [CreateAssetMenu(menuName = "Character/Visa Data")]
     public class PossibleVisaData : ScriptableObject
     {
         public List<string> nameList; // Master list of names
         public List<Sprite> characterSprites;
-        public List<string> planetsOfOrigin;
+        public List<string> purposes;
     }
 }

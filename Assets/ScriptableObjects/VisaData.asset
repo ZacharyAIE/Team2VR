@@ -9,8 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb664a923e7c97f4a995d3256860f827, type: 3}
-  m_Name: FOod
+  m_Script: {fileID: 11500000, guid: c1caf64e76d7be643ab70da8bef6f185, type: 3}
+  m_Name: VisaData
   m_EditorClassIdentifier: 
-  itemName: Food
-  isLegal: 1
+  nameList:
+  - Gleep Glorp
+  - Buzz Alderaan
+  - Quacken
+  - Gazorp
+  - Vraeddiet
+  - Qhuqno
+  characterSprites: []
+  purposes:
+  - WARRR!!!!
+  - Humanitarian Aid
+  - Journalism
