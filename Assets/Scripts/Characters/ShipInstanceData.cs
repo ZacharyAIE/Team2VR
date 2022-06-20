@@ -4,13 +4,17 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    public class CharacterInstanceData : MonoBehaviour
+    public class ShipInstanceData : MonoBehaviour
     {
-        public CharacterData characterData;
-        public VisaData visaData;
+        public ShipData shipData;
+        public PossibleVisaData visaData;
 
         public string characterName;
         public string visaName;
+        public string characterPlanetOfOrigin;
+        public string visaPlanetOfOrigin;
+        public string characterDestination;
+        public string visaDestination;
 
         public string GenerateVisaName()
         {

@@ -7,11 +7,11 @@ namespace CharacterComparison
 
     public class GameManager : MonoBehaviour
     {
-        CharacterInstanceData trueCharacterInstanceData;
-        CharacterInstanceData falseCharacterInstanceData;
+        ShipInstanceData trueCharacterInstanceData;
+        ShipInstanceData falseCharacterInstanceData;
 
-        public VisaData visaData;
-        public CharacterData characterData;
+        public PossibleVisaData visaData;
+        public ShipData characterData;
 
         public float randomiseChance = 0.8f; // % as a decimal
 
@@ -34,22 +34,12 @@ namespace CharacterComparison
         void Start()
         {
             // Create the Character Data Instances
-            trueCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
-            falseCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
+            trueCharacterInstanceData = gameObject.AddComponent<ShipInstanceData>();
+            falseCharacterInstanceData = gameObject.AddComponent<ShipInstanceData>();
             GenerateCharacter();      
         }
 
-        void Update()
-        {
-            // Debugging
-            Debug.Log("True Name: " + trueCharacterInstanceData.characterName);
-            Debug.Log("True Visa: " + trueCharacterInstanceData.visaName);
-
-            Debug.Log("False Name: " + falseCharacterInstanceData.characterName);
-            Debug.Log("False Visa: " + falseCharacterInstanceData.visaName);
-        }
-
-        public void RandomiseData(CharacterInstanceData data)
+        public void RandomiseData(ShipInstanceData data)
         {
             var seed = Random.value;
 
@@ -63,13 +53,14 @@ namespace CharacterComparison
 
         public void GenerateCharacter()
         {
+            // Set up the character's real data
             trueCharacterInstanceData.visaData = visaData;
-            trueCharacterInstanceData.characterData = characterData;
+            trueCharacterInstanceData.shipData = characterData;
             trueCharacterInstanceData.GenerateVisaName();
 
             // Set up the false instance data
             falseCharacterInstanceData.visaData = visaData;
-            falseCharacterInstanceData.characterData = characterData;
+            falseCharacterInstanceData.shipData = characterData;
             falseCharacterInstanceData.visaName = trueCharacterInstanceData.visaName;
             falseCharacterInstanceData.characterName = trueCharacterInstanceData.characterName;
 

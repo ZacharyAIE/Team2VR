@@ -8,7 +8,7 @@ namespace CharacterComparison {
         public string characterName;
         public GameObject shipModel;
         public Sprite characterProfileImage;
-        public VisaData visaData;
+        public PossibleVisaData visaData;
 
         // Start is called before the first frame update
         void Start()
