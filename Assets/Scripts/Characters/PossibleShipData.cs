@@ -6,7 +6,7 @@ namespace CharacterComparison
 {
 
     [CreateAssetMenu(menuName = "Character/Ship Data")]
-    public class ShipData : ScriptableObject
+    public class PossibleShipData : ScriptableObject
     {
         public List<string> shipNames;
         public List<GameObject> shipModels;

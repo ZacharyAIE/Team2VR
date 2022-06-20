@@ -6,7 +6,7 @@ namespace CharacterComparison
 {
     public class CharacterInstanceData : MonoBehaviour
     {
-        public ShipData shipData;
+        public PossibleShipData shipData;
         public PossibleVisaData visaData;
         public PlanetList planetList;
 

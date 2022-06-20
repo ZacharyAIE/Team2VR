@@ -13,10 +13,10 @@ namespace CharacterComparison
         Cruiser
     }
 
-
-    [CreateAssetMenu(menuName = "Character/Create Ship Type")]
-    public class Ship : ScriptableObject
+    public class Ship : MonoBehaviour
     {
+        public string shipName;
+        public GameObject shipModel;
         public ShipTypes shipType;
         public List<CargoItem> cargoItems;
 

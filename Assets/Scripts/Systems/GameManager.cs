@@ -11,7 +11,7 @@ namespace CharacterComparison
         //CharacterInstanceData falseCharacterInstanceData;
 
         public PossibleVisaData visaData;
-        public ShipData shipData;
+        public PossibleShipData shipData;
 
         public float randomiseChance = 0.8f; // % as a decimal
 
