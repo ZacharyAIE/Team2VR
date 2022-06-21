@@ -30,6 +30,8 @@ namespace CharacterComparison
         {
             cargoList = FindObjectOfType<CargoList>();
             shipTypeList = FindObjectOfType<ShipTypeList>();
+            possibleShipData = GetComponent<GameManager>().shipData;
+            GenerateShip();
         }
 
         public void SetShipType()
@@ -38,10 +40,8 @@ namespace CharacterComparison
             shipType = shipTypeList.shipTypes[Random.Range(0, shipTypeList.shipTypes.Count)];
         }
 
-        // Set up the ship.
-        private void Start()
+        public void GenerateShip()
         {
-            possibleShipData = GetComponent<GameManager>().shipData;
             SetShipName();
             SetShipType();
             SetCargo();
@@ -55,9 +55,7 @@ namespace CharacterComparison
             shipType._maxCargo = 0;
             shipType._shipType = 0;
             cargoItems.Clear();
-            SetShipName();
-            SetShipType();
-            SetCargo();
+            GenerateShip();
         }
 
         // Populate the cargo hold with random cargo items from a list
