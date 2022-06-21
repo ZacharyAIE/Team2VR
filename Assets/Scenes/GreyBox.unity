@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EnableStrafe: 1
   m_UseGravity: 1
   m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 0}
+  m_ForwardSource: {fileID: 1200795396}
   m_LeftHandMoveAction:
     m_UseReference: 1
     m_Action:
@@ -1479,7 +1479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3310797303421060336, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536188552112637896, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
       propertyPath: m_RootOrder
@@ -1547,6 +1547,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
+--- !u!4 &1200795396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8530349126983264660, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
+  m_PrefabInstance: {fileID: 1200795395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1293192808 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6557071200668192901, guid: 27b69423829c4de44a04019c37cda5db, type: 3}
