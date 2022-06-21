@@ -15,8 +15,8 @@ public class ScoreManager : MonoBehaviour
 
     public TextMeshPro scoreText;
     public TextMeshPro highScoreText;
-    public int valueToAdd = 0;
-    public int valueToTake = 0;
+
+
 
     private int score = 0;
     private int highScore = 0;
@@ -38,18 +38,10 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Add points, update the UI and store the highscore in playerprefrance for next game
-    public void AddPoints()
+    // pass a -x value to remove points
+    public void AddPoints(int pointsToAdd)
     {
-        score += valueToAdd;
-        scoreText.text = score.ToString() + "POINTS";
-        if (highScore < score)
-            PlayerPrefs.SetInt("Highscore", score);
-    }
-
-    // Take points, update the UI and store the highscore in playerprefrance for next game
-    public void RemovePoints()
-    {
-        score -= valueToTake;
+        score += pointsToAdd;
         scoreText.text = score.ToString() + "POINTS";
         if (highScore < score)
             PlayerPrefs.SetInt("Highscore", score);
