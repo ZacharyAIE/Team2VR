@@ -8,6 +8,8 @@ namespace CharacterComparison
     public class GameManager : MonoBehaviour
     {
         CharacterInstanceData trueCharacterInstanceData;
+        ValidPurposeCombo validPurposeCombos;
+        bool isCharacterAcceptable;
         //CharacterInstanceData falseCharacterInstanceData;
 
         public PossibleVisaData visaData;
@@ -35,6 +37,7 @@ namespace CharacterComparison
         {
             // Create the Character Data Instances
             trueCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
+            validPurposeCombos = GetComponent<ValidPurposeCombo>();
             //falseCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
             GenerateCharacter();
             var ship = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
@@ -63,11 +66,12 @@ namespace CharacterComparison
             // Set up the character's real data
             trueCharacterInstanceData.visaData = visaData;
             trueCharacterInstanceData.shipData = shipData;
-            trueCharacterInstanceData.GenerateVisaName();
-            trueCharacterInstanceData.GenerateShipName();
-            trueCharacterInstanceData.GeneratePlanetOfOrigin();
-            trueCharacterInstanceData.GenerateDestination(trueCharacterInstanceData.shipPlanetOfOrigin); // Dont include our origin.
-            trueCharacterInstanceData.GeneratePurpose();
+            trueCharacterInstanceData.SetVisaName();
+            trueCharacterInstanceData.SetVisaType();
+            trueCharacterInstanceData.SetShipName();
+            trueCharacterInstanceData.SetPlanetOfOrigin();
+            trueCharacterInstanceData.SetDestination(trueCharacterInstanceData.shipPlanetOfOrigin); // Dont include our origin.
+            trueCharacterInstanceData.SetPurpose();
             trueCharacterInstanceData.stayDuration = Random.Range(0, 52);
 
             //// Set up the false instance data
@@ -84,6 +88,66 @@ namespace CharacterComparison
 
             // Randomise it
             RandomiseData(trueCharacterInstanceData);
+        }
+
+        public bool IsCharacterCorrect(CharacterInstanceData c)
+        {
+            if (CheckPurpose(c) && CheckName(c) && CheckOrigin(c) && CheckDestination(c))
+            {
+                isCharacterAcceptable = true;
+            }
+            else
+            {
+                isCharacterAcceptable = false;
+            }
+            return isCharacterAcceptable;
+
+            
+        }
+        public bool CheckPurpose(CharacterInstanceData c)
+        {
+            if(c.visaDestination.restrictions != null)
+            {
+                foreach (Restriction r in c.visaDestination.restrictions)
+                {
+                    foreach (Purpose p in validPurposeCombos.purposes)
+                    {
+                        if (p.Compare(c.visaType, r))
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public bool CheckName(CharacterInstanceData c)
+        {
+            if (c.shipOwnerName == c.visaName)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool CheckOrigin(CharacterInstanceData c)
+        {
+            if (c.shipPlanetOfOrigin == c.visaPlanetOfOrigin)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool CheckDestination(CharacterInstanceData c)
+        {
+            if (c.shipDestination == c.visaDestination)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

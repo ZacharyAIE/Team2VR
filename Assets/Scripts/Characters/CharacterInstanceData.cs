@@ -19,6 +19,7 @@ namespace CharacterComparison
 
         [Header("VISA DATA")]
         public string visaName;
+        public VisaType visaType;
         public Planet visaPlanetOfOrigin;
         public Planet visaDestination;
         [Multiline(2)]public string visaPurpose;
@@ -29,7 +30,7 @@ namespace CharacterComparison
             planetList = GetComponent<PlanetList>();
         }
 
-        public string GenerateVisaName()
+        public string SetVisaName()
         {
             visaName = visaData.nameList[Random.Range(0, visaData.nameList.Count)]; // Turn this into a function with the list as a parameter
             if(shipOwnerName == null)
@@ -38,14 +39,14 @@ namespace CharacterComparison
             return visaName;
         }
 
-        public string GenerateShipName()
+        public string SetShipName()
         {
             shipName = shipData.shipNames[Random.Range(0, shipData.shipNames.Count)]; // Turn this into a function with the list as a parameter
 
             return shipName;
         }
 
-        public Planet GeneratePlanetOfOrigin()
+        public Planet SetPlanetOfOrigin()
         {
             visaPlanetOfOrigin = planetList.planetList[Random.Range(0, planetList.planetList.Count)];
 
@@ -55,7 +56,7 @@ namespace CharacterComparison
             return visaPlanetOfOrigin;
         }
 
-        public Planet GenerateDestination(Planet excludePlanet)
+        public Planet SetDestination(Planet excludePlanet)
         {
             if(excludePlanet != shipPlanetOfOrigin && excludePlanet != visaPlanetOfOrigin) { }
                 visaDestination = planetList.planetList[Random.Range(0, planetList.planetList.Count)];
@@ -65,11 +66,18 @@ namespace CharacterComparison
             return visaDestination;
         }
 
-        public string GeneratePurpose()
+        public string SetPurpose()
         {
             visaPurpose = visaData.purposes[Random.Range(0, visaData.purposes.Count)]; // Turn this into a function with the list as a parameter
 
             return visaPurpose;
+        }
+
+        public VisaType SetVisaType()
+        {
+            visaType = (VisaType)Random.Range(0, System.Enum.GetNames(typeof(Restriction)).Length);
+
+            return visaType;
         }
 
     }
