@@ -50,7 +50,7 @@ MonoBehaviour:
   onTeleportActivate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8530349126766025405, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseController,
           Unity.XR.Interaction.Toolkit
         m_MethodName: set_enableInputActions
@@ -103,7 +103,7 @@ MonoBehaviour:
   onTeleportCancel:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8530349126766025405, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseController,
           Unity.XR.Interaction.Toolkit
         m_MethodName: set_enableInputActions
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   onTeleportActivate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8530349126473811642, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseController,
           Unity.XR.Interaction.Toolkit
         m_MethodName: set_enableInputActions
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   onTeleportCancel:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8530349126473811642, guid: 0b566d6857b1a1e469d2ab95c767742c, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseController,
           Unity.XR.Interaction.Toolkit
         m_MethodName: set_enableInputActions

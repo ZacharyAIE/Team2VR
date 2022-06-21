@@ -42,6 +42,8 @@ namespace CharacterComparison
             GenerateCharacter();
             var ship = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
             ship.transform.parent = shipSpawnPoint;
+
+            Debug.Log(IsCharacterCorrect(trueCharacterInstanceData));
         }
 
         public void RandomiseData(CharacterInstanceData data)
@@ -67,24 +69,12 @@ namespace CharacterComparison
             trueCharacterInstanceData.visaData = visaData;
             trueCharacterInstanceData.shipData = shipData;
             trueCharacterInstanceData.SetVisaName();
+            trueCharacterInstanceData.SetShip();
             trueCharacterInstanceData.SetVisaType();
-            trueCharacterInstanceData.SetShipName();
             trueCharacterInstanceData.SetPlanetOfOrigin();
             trueCharacterInstanceData.SetDestination(trueCharacterInstanceData.shipPlanetOfOrigin); // Dont include our origin.
             trueCharacterInstanceData.SetPurpose();
             trueCharacterInstanceData.stayDuration = Random.Range(0, 52);
-
-            //// Set up the false instance data
-            //falseCharacterInstanceData.visaData = visaData;
-            //falseCharacterInstanceData.shipData = shipData;
-            //falseCharacterInstanceData.visaName = trueCharacterInstanceData.visaName;
-            //falseCharacterInstanceData.shipName = trueCharacterInstanceData.shipName;
-            //falseCharacterInstanceData.shipOwnerName = trueCharacterInstanceData.shipOwnerName;
-            //falseCharacterInstanceData.shipDestination = trueCharacterInstanceData.shipDestination;
-            //falseCharacterInstanceData.visaDestination = trueCharacterInstanceData.visaDestination;
-            //falseCharacterInstanceData.planetOfOrigin = trueCharacterInstanceData.planetOfOrigin;
-            //falseCharacterInstanceData.visaPlanetOfOrigin = trueCharacterInstanceData.visaPlanetOfOrigin;
-            //falseCharacterInstanceData.visaPurpose = trueCharacterInstanceData.visaPurpose;
 
             // Randomise it
             RandomiseData(trueCharacterInstanceData);
@@ -106,7 +96,7 @@ namespace CharacterComparison
         }
         public bool CheckPurpose(CharacterInstanceData c)
         {
-            if(c.visaDestination.restrictions != null)
+            if(c.visaDestination.restrictions.Count != 0)
             {
                 foreach (Restriction r in c.visaDestination.restrictions)
                 {

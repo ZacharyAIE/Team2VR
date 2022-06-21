@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4534564860203758158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4534564860203758156}
+  - component: {fileID: 4534564860203758159}
+  - component: {fileID: 4534564860203758162}
+  - component: {fileID: 4534564860203758157}
+  - component: {fileID: 4534564860203758163}
+  - component: {fileID: 6779805299878176972}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4534564860203758156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.9109263, y: 2.2035182, z: -1.7367721}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4534564860203758159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07216bf0414ab1443aeb051f283720da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visaData: {fileID: 11400000, guid: cdced8e72a250894e866c5226f2759ef, type: 2}
+  shipData: {fileID: 11400000, guid: 556ff739d81feba4c86bd02dc719a4b1, type: 2}
+  randomiseChance: 0.5
+  shipSpawnPoint: {fileID: 0}
+--- !u!114 &4534564860203758162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550ec0ad06a8b394fac2151b9703993b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cargoItems:
+  - {fileID: 11400000, guid: 0cc9423fce09a5c4bb45d730453bca9f, type: 2}
+  - {fileID: 11400000, guid: 7ef355b8e1b898d48b45dd2f4f19ad15, type: 2}
+  - {fileID: 11400000, guid: 86cbe6b94c0428f4c8ae86d8d472bf54, type: 2}
+--- !u!114 &4534564860203758157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012ea36397cf3c540b908de050f5306d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &4534564860203758163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e41bcd747ee0ce43a26560c88d62a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purposes:
+  - visaType: 0
+    restriction: 0
+--- !u!114 &6779805299878176972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a828afe6cd506b44d8aa50fa8bdd6237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipTypes:
+  - _shipType: 0
+    _maxCargo: 0
+  - _shipType: 2
+    _maxCargo: 5

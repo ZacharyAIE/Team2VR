@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Substances
   m_EditorClassIdentifier: 
   itemName: Drugz
-  isLegal: 0
+  isLegal: 1

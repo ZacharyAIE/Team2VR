@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WMD
   m_EditorClassIdentifier: 
   itemName: Weapons of Mass Destruction
-  isLegal: 0
+  isLegal: 1

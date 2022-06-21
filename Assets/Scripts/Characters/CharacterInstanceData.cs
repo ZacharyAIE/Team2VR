@@ -8,6 +8,7 @@ namespace CharacterComparison
     {
         public PossibleShipData shipData;
         public PossibleVisaData visaData;
+        ValidPurposeCombo validPurposeCombo;
         public PlanetList planetList;
 
         [Header("SHIP DATA")]
@@ -22,12 +23,18 @@ namespace CharacterComparison
         public VisaType visaType;
         public Planet visaPlanetOfOrigin;
         public Planet visaDestination;
-        [Multiline(2)]public string visaPurpose;
+        private Purpose visaPurpose;
         [Tooltip("In Weeks")] public int stayDuration;
 
         private void Awake()
         {
             planetList = GetComponent<PlanetList>();
+            validPurposeCombo = GetComponent<ValidPurposeCombo>();
+        }
+
+        public void SetShip()
+        {
+            ship = gameObject.AddComponent<Ship>();
         }
 
         public string SetVisaName()
@@ -39,12 +46,7 @@ namespace CharacterComparison
             return visaName;
         }
 
-        public string SetShipName()
-        {
-            shipName = shipData.shipNames[Random.Range(0, shipData.shipNames.Count)]; // Turn this into a function with the list as a parameter
-
-            return shipName;
-        }
+        
 
         public Planet SetPlanetOfOrigin()
         {
@@ -66,9 +68,9 @@ namespace CharacterComparison
             return visaDestination;
         }
 
-        public string SetPurpose()
+        public Purpose SetPurpose()
         {
-            visaPurpose = visaData.purposes[Random.Range(0, visaData.purposes.Count)]; // Turn this into a function with the list as a parameter
+            visaPurpose = validPurposeCombo.purposes[Random.Range(0, validPurposeCombo.purposes.Count)];
 
             return visaPurpose;
         }
