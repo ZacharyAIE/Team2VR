@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
+    // This class contains data about a planet.
     public class Planet : MonoBehaviour
     {
         public PlanetData planetData;

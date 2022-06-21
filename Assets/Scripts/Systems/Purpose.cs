@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace CharacterComparison 
 { 
+    // The object that determines a correct visa type to restriction combo
     [System.Serializable]
     public struct Purpose
     {

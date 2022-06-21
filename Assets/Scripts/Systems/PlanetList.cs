@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
+    // This class contains a list of planets
     public class PlanetList : MonoBehaviour
     {
 

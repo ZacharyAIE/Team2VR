@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-
+    // This class stores all ship names and ship models
     [CreateAssetMenu(menuName = "Character/Ship Data")]
     public class PossibleShipData : ScriptableObject
     {

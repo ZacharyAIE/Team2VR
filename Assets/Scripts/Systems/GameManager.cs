@@ -14,6 +14,7 @@ namespace CharacterComparison
 
         public PossibleVisaData visaData;
         public PossibleShipData shipData;
+        private GameObject shipGameObject;
 
         public float randomiseChance = 0.8f; // % as a decimal
 
@@ -40,10 +41,21 @@ namespace CharacterComparison
             validPurposeCombos = GetComponent<ValidPurposeCombo>();
             //falseCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
             GenerateCharacter();
-            var ship = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
-            ship.transform.parent = shipSpawnPoint;
+            shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
+            shipGameObject.transform.parent = shipSpawnPoint;
 
             Debug.Log(IsCharacterCorrect(trueCharacterInstanceData));
+        }
+
+        [ContextMenu("Reset Character")]
+        public void ResetGameState()
+        {
+            Destroy(shipGameObject);
+            trueCharacterInstanceData.ResetShip();
+            GenerateCharacter();
+            
+            shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
+            shipGameObject.transform.parent = shipSpawnPoint;
         }
 
         public void RandomiseData(CharacterInstanceData data)
@@ -55,7 +67,7 @@ namespace CharacterComparison
             {
                 data.visaName = data.visaData.nameList[Random.Range(0, data.visaData.nameList.Count)];
                 data.shipOwnerName = data.visaData.nameList[Random.Range(0, data.visaData.nameList.Count)];
-                data.shipName = data.shipData.shipNames[Random.Range(0, data.shipData.shipNames.Count)];
+                data.ship.shipName = data.shipData.shipNames[Random.Range(0, data.shipData.shipNames.Count)];
                 data.shipPlanetOfOrigin = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
                 data.visaPlanetOfOrigin = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
                 data.shipDestination = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
@@ -63,6 +75,7 @@ namespace CharacterComparison
             }
         }
 
+        // Generate the data for the character
         public void GenerateCharacter()
         {
             // Set up the character's real data
@@ -80,6 +93,7 @@ namespace CharacterComparison
             RandomiseData(trueCharacterInstanceData);
         }
 
+        // These functions check whether the character would be considered correct.
         public bool IsCharacterCorrect(CharacterInstanceData c)
         {
             if (CheckPurpose(c) && CheckName(c) && CheckOrigin(c) && CheckDestination(c))

@@ -13,6 +13,7 @@ namespace CharacterComparison
         Cruiser
     }
 
+    // This class stores data about the ship specifically
     public class Ship : MonoBehaviour
     {
         private CargoList cargoList;
@@ -33,9 +34,11 @@ namespace CharacterComparison
 
         public void SetShipType()
         {
+            // Randomly select ship type
             shipType = shipTypeList.shipTypes[Random.Range(0, shipTypeList.shipTypes.Count)];
         }
 
+        // Set up the ship.
         private void Start()
         {
             possibleShipData = GetComponent<GameManager>().shipData;
@@ -44,6 +47,20 @@ namespace CharacterComparison
             SetCargo();
         }
 
+        // Reset all data then regenerate it
+        public void ResetShip()
+        {
+            shipName = null;
+            shipModel = null; // To Replace
+            shipType._maxCargo = 0;
+            shipType._shipType = 0;
+            cargoItems.Clear();
+            SetShipName();
+            SetShipType();
+            SetCargo();
+        }
+
+        // Populate the cargo hold with random cargo items from a list
         public void SetCargo()
         {
             for(int i = 0; i < shipType._maxCargo; i++)
@@ -52,6 +69,8 @@ namespace CharacterComparison
             }
             
         }
+
+        // Set the ship name
         public string SetShipName()
         {
             shipName = possibleShipData.shipNames[Random.Range(0, possibleShipData.shipNames.Count)]; // Turn this into a function with the list as a parameter
@@ -60,6 +79,7 @@ namespace CharacterComparison
         }
     }
 
+    // This struct determines how much cargo a ship type enum can hold.
     [System.Serializable]
     public struct ShipType
     {

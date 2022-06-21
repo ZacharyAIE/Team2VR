@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-
+    // This scriptable object stores a planet's preset name and amount of travel and item restrictions
     [CreateAssetMenu(menuName = "Planet / Create Planet")]
     public class PlanetData : ScriptableObject
     {

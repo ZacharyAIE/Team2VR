@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
+    // This class stores all data about the character
     public class CharacterInstanceData : MonoBehaviour
     {
         public PossibleShipData shipData;
@@ -32,9 +33,13 @@ namespace CharacterComparison
             validPurposeCombo = GetComponent<ValidPurposeCombo>();
         }
 
+        // Add the ship to the game manager.
         public void SetShip()
         {
-            ship = gameObject.AddComponent<Ship>();
+            // Don't make a new one if we already have one.
+            if(gameObject.GetComponent<Ship>() == null)
+                ship = gameObject.AddComponent<Ship>();
+            shipName = ship.shipName;
         }
 
         public string SetVisaName()
@@ -46,7 +51,11 @@ namespace CharacterComparison
             return visaName;
         }
 
-        
+        // Reset the ship's data
+        public void ResetShip()
+        {
+            ship.ResetShip();
+        }
 
         public Planet SetPlanetOfOrigin()
         {
@@ -60,6 +69,7 @@ namespace CharacterComparison
 
         public Planet SetDestination(Planet excludePlanet)
         {
+            // Select a planet from a list of planets, but don't include their origin planet.
             if(excludePlanet != shipPlanetOfOrigin && excludePlanet != visaPlanetOfOrigin) { }
                 visaDestination = planetList.planetList[Random.Range(0, planetList.planetList.Count)];
 
