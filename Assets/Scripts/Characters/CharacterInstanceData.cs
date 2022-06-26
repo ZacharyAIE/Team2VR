@@ -9,7 +9,7 @@ namespace CharacterComparison
     {
         public PossibleShipData shipData;
         public PossibleVisaData visaData;
-        ValidPurposeCombo validPurposeCombo;
+        ValidPurposes validPurposes;
         public PlanetList planetList;
 
         [Header("SHIP DATA")]
@@ -30,7 +30,7 @@ namespace CharacterComparison
         private void Awake()
         {
             planetList = GetComponent<PlanetList>();
-            validPurposeCombo = GetComponent<ValidPurposeCombo>();
+            validPurposes = GetComponent<ValidPurposes>();
         }
 
         // Add the ship to the game manager.
@@ -80,7 +80,7 @@ namespace CharacterComparison
 
         public Purpose SetPurpose()
         {
-            visaPurpose = validPurposeCombo.purposes[Random.Range(0, validPurposeCombo.purposes.Count)];
+            visaPurpose = validPurposes.purposeCombo.purposes[Random.Range(0, validPurposes.purposeCombo.purposes.Count)];
 
             return visaPurpose;
         }

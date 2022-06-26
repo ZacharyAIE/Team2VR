@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    public class ValidPurposeCombo : MonoBehaviour
+    [CreateAssetMenu(menuName = "Visa/Visa Purpose Combo List")]
+    public class ValidPurposeCombo : ScriptableObject
     {
         public List<Purpose> purposes;
     }

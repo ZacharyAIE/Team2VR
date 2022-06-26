@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CharacterComparison 
 { 
@@ -8,17 +7,21 @@ namespace CharacterComparison
     public class GameManager : MonoBehaviour
     {
         CharacterInstanceData trueCharacterInstanceData;
-        ValidPurposeCombo validPurposeCombos;
-        bool isCharacterAcceptable;
-        //CharacterInstanceData falseCharacterInstanceData;
-
+        ValidPurposes validPurposes;
+        [Tooltip("Insert the list of possible data in the visa")]
         public PossibleVisaData visaData;
+        [Tooltip("Insert the list of possible data for ship data")]
         public PossibleShipData shipData;
         private GameObject shipGameObject;
-
-        public float randomiseChance = 0.8f; // % as a decimal
-
+        [Tooltip("The place where the ship should be instantiated when the character is generated")]
         public Transform shipSpawnPoint;
+        [Tooltip("Chance for the character to have randomised data")]
+        public float randomiseChance = 0.8f; // % as a decimal
+        bool isCharacterAcceptable;
+        public UnityEvent OnAnswerCorrect;
+        public UnityEvent OnAnswerIncorrect;
+
+
 
         // GAME MANAGER SINGLETON INSTANCE
         public static GameManager instance;
@@ -38,7 +41,7 @@ namespace CharacterComparison
         {
             // Create the Character Data Instances
             trueCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
-            validPurposeCombos = GetComponent<ValidPurposeCombo>();
+            validPurposes = GetComponent<ValidPurposes>();
             //falseCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
             GenerateCharacter();
             shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
@@ -114,7 +117,7 @@ namespace CharacterComparison
             {
                 foreach (Restriction r in c.visaDestination.restrictions)
                 {
-                    foreach (Purpose p in validPurposeCombos.purposes)
+                    foreach (Purpose p in validPurposes.purposeCombo.purposes)
                     {
                         if (p.Compare(c.visaType, r))
                         {
@@ -152,6 +155,21 @@ namespace CharacterComparison
                 return true;
             }
             return false;
+        }
+        public void AcceptButton()
+        {
+            if (IsCharacterCorrect(trueCharacterInstanceData))
+                OnAnswerCorrect.Invoke();
+            else
+                OnAnswerIncorrect.Invoke();
+        }
+
+        public void DenyButton()
+        {
+            if (!IsCharacterCorrect(trueCharacterInstanceData))
+                OnAnswerCorrect.Invoke();
+            else
+                OnAnswerIncorrect.Invoke();
         }
     }
 }
