@@ -237,7 +237,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 0
-  m_ModelPrefab: {fileID: 2438757715876879646, guid: 8565c76e56dc0e04e9857fe5d1a1c013, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 8244260132306089421}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 4766092344323370, guid: e201a24a09e942042b93390d0444d728, type: 3}
-  m_ModelParent: {fileID: 8244260132585520182}
+  m_ModelParent: {fileID: 8244260132839558696}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 4927695388962516, guid: c6a74181d4000004887343fb87b3c53a, type: 3}
-  m_ModelParent: {fileID: 8244260132796425361}
+  m_ModelParent: {fileID: 8244260133021028498}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
@@ -1995,13 +1995,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8244260133021028499}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.49467388, y: 0.50517184, z: -0.5087567, w: 0.49118814}
+  m_LocalPosition: {x: -0.04783322, y: -0.029116634, z: -0.09992945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8244260132796425361}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90.405, y: 91.607, z: -0.0010070801}
 --- !u!1 &8244260133273163505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 0
-  m_ModelPrefab: {fileID: 4149444341506915341, guid: 14cb863b172636c499aca1e121ed2d96, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 8244260133602870941}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
