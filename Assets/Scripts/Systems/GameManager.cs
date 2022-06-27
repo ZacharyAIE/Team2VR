@@ -6,13 +6,13 @@ namespace CharacterComparison
 
     public class GameManager : MonoBehaviour
     {
-        CharacterInstanceData trueCharacterInstanceData;
+        public CharacterInstanceData trueCharacterInstanceData;
         ValidPurposes validPurposes;
         [Tooltip("Insert the list of possible data in the visa")]
         public PossibleVisaData visaData;
         [Tooltip("Insert the list of possible data for ship data")]
         public PossibleShipData shipData;
-        private GameObject shipGameObject;
+        public GameObject shipGameObject;
         [Tooltip("The place where the ship should be instantiated when the character is generated")]
         public Transform shipSpawnPoint;
         [Tooltip("Chance for the character to have randomised data")]
@@ -31,7 +31,7 @@ namespace CharacterComparison
             {
                 if (instance == null)
                 {
-                    instance = new GameManager();
+                    instance = FindObjectOfType<GameManager>();
                 }
                 return instance;
             }
@@ -61,7 +61,7 @@ namespace CharacterComparison
             shipGameObject.transform.parent = shipSpawnPoint;
         }
 
-        public void RandomiseData(CharacterInstanceData data)
+        private void RandomiseData(CharacterInstanceData data)
         {
             var seed = Random.value;
 
@@ -79,7 +79,7 @@ namespace CharacterComparison
         }
 
         // Generate the data for the character
-        public void GenerateCharacter()
+        private void GenerateCharacter()
         {
             // Set up the character's real data
             trueCharacterInstanceData.visaData = visaData;
@@ -97,7 +97,7 @@ namespace CharacterComparison
         }
 
         // These functions check whether the character would be considered correct.
-        public bool IsCharacterCorrect(CharacterInstanceData c)
+        private bool IsCharacterCorrect(CharacterInstanceData c)
         {
             if (CheckPurpose(c) && CheckName(c) && CheckOrigin(c) && CheckDestination(c))
             {
@@ -111,7 +111,7 @@ namespace CharacterComparison
 
             
         }
-        public bool CheckPurpose(CharacterInstanceData c)
+        private bool CheckPurpose(CharacterInstanceData c)
         {
             if(c.visaDestination.restrictions.Count != 0)
             {
@@ -132,7 +132,7 @@ namespace CharacterComparison
                 return true;
             }
         }
-        public bool CheckName(CharacterInstanceData c)
+        private bool CheckName(CharacterInstanceData c)
         {
             if (c.shipOwnerName == c.visaName)
             {
@@ -140,7 +140,7 @@ namespace CharacterComparison
             }
             return false;
         }
-        public bool CheckOrigin(CharacterInstanceData c)
+        private bool CheckOrigin(CharacterInstanceData c)
         {
             if (c.shipPlanetOfOrigin == c.visaPlanetOfOrigin)
             {
@@ -148,7 +148,7 @@ namespace CharacterComparison
             }
             return false;
         }
-        public bool CheckDestination(CharacterInstanceData c)
+        private bool CheckDestination(CharacterInstanceData c)
         {
             if (c.shipDestination == c.visaDestination)
             {
