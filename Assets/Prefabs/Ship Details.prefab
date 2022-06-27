@@ -992,6 +992,7 @@ GameObject:
   - component: {fileID: 6160411071950540551}
   - component: {fileID: 5421293596407307945}
   - component: {fileID: 6397068574245751057}
+  - component: {fileID: 8069121089606620046}
   m_Layer: 5
   m_Name: Ship Details
   m_TagString: Untagged
@@ -1062,7 +1063,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6397068574245751057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,6 +1081,48 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8069121089606620046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046288465031936051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef94962efcfa794283919d2ecdb2781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipImage: {fileID: 6163317477075015484}
+  planetNavImage: {fileID: 0}
+  cargoImage: {fileID: 0}
+  navigationPanel: {fileID: 8747501199216444229}
+  cargoPanel: {fileID: 6714856691864384963}
+  regoText: {fileID: 7681132191310987953}
+  shipNameText: {fileID: 2124708644209224715}
+  shipOwnerText: {fileID: 335234930000880311}
+  shipClassText: {fileID: 1501110594297268824}
+  shipDestinationText: {fileID: 6517068467934137104}
+  planetDesignationText: {fileID: 7653019650213491451}
+  planetStatusText: {fileID: 4855195127952162671}
+  navButton: {fileID: 7057729709713370581}
+  cargoButton: {fileID: 3802222453385273698}
+  shipCargoListText: {fileID: 8747796430903883524}
+  shipChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8069121089606620046}
+        m_TargetAssemblyTypeName: ShipInformationUI, Assembly-CSharp
+        m_MethodName: FillShipInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3567803197764120305
 GameObject:
   m_ObjectHideFlags: 0

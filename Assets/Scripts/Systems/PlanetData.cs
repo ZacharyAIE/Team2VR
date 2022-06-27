@@ -12,6 +12,8 @@ namespace CharacterComparison
     public class PlanetData : ScriptableObject
     {
         public string planetName;
+        public string designation;
+        public string societalStatus;
         public GameObject planetModel;
         public int restrictionAmount;
         public int restrictedItemAmount;
