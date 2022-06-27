@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623fa0f1e864a054ca3d55bb347f79fa, type: 3}
-  m_Name: Gazorpazorp
+  m_Script: {fileID: 11500000, guid: 3e41bcd747ee0ce43a26560c88d62a2e, type: 3}
+  m_Name: ValidPurposes
   m_EditorClassIdentifier: 
-  planetName: Gazorpazorp
-  planetModel: {fileID: 100000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
-  restrictionAmount: 2
-  restrictedItemAmount: 1
+  purposes:
+  - visaType: 0
+    restriction: 0
+  - visaType: 2
+    restriction: 2
+  - visaType: 4
+    restriction: 2

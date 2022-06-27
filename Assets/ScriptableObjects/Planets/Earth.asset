@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Earth
   m_EditorClassIdentifier: 
   planetName: Earth
+  planetModel: {fileID: 4410402899750998667, guid: bf0a225a9ff184f2789f3036faaa9150, type: 3}
   restrictionAmount: 0
   restrictedItemAmount: 1
