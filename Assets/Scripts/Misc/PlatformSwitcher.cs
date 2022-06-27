@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// turns objects on or off based on platform - are we running in editor or on device?
+/// <summary>
+/// This class turns objects on or off based on platform - are we running in editor or on device?
+/// </summary>
 public class PlatformSwitcher : MonoBehaviour
 {
     public UnityTemplateProjects.SimpleCameraController cameraController;

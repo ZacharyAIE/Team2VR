@@ -21,6 +21,7 @@ namespace CharacterComparison
         private PossibleShipData possibleShipData;
 
         public string shipName;
+        public string shipID;
         public GameObject shipModel;
         public ShipType shipType;
         public List<CargoItem> cargoItems = new List<CargoItem>();
@@ -40,11 +41,20 @@ namespace CharacterComparison
             shipType = shipTypeList.shipTypes[Random.Range(0, shipTypeList.shipTypes.Count)];
         }
 
+        public void SetShipID()
+        {
+            System.Random rnd = new System.Random();
+            char randomChar = (char)rnd.Next('a', 'z');
+            shipID = Random.Range(1000000, 9999999).ToString() + randomChar.ToString().ToUpper();
+            
+        }
+
         public void GenerateShip()
         {
             SetShipName();
             SetShipType();
             SetCargo();
+            SetShipID();
         }
 
         // Reset all data then regenerate it

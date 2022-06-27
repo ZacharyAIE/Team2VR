@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    // This stores all restriction types. Designers can have at this :)
+    /// <summary>
+    /// This stores all restriction types
+    /// </summary>
     public enum Restriction
     {
         Disaster,

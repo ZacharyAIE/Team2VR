@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Jarbanar
   m_EditorClassIdentifier: 
   planetName: Jarbanar
+  planetModel: {fileID: 100000, guid: bae110eee250e4b418b188f4ae4e3170, type: 3}
   restrictionAmount: 1
   restrictedItemAmount: 0

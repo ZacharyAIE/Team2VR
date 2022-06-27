@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    // This class stores a list of possible cargo items
+    /// <summary>
+    /// This class stores a list of possible cargo items
+    /// </summary>
     public class CargoList : MonoBehaviour
     {
 

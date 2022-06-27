@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    // This class stores all data about the character
+    /// <summary>
+    /// This class stores all data about the character
+    /// </summary>
     public class CharacterInstanceData : MonoBehaviour
     {
         public PossibleShipData shipData;
