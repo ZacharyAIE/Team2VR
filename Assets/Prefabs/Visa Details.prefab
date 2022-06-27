@@ -1776,6 +1776,7 @@ GameObject:
   - component: {fileID: 1441496954390405018}
   - component: {fileID: 957919991467376652}
   - component: {fileID: 3745529859421802981}
+  - component: {fileID: 8783552828988684628}
   m_Layer: 5
   m_Name: Visa Details
   m_TagString: Untagged
@@ -1864,6 +1865,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8783552828988684628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627654618024266148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb8a4676cfa1bf459cd3be9f3b351fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visaNameText: {fileID: 2782096541939829781}
+  visaOriginText: {fileID: 7973358266391465751}
+  visaDestinationText: {fileID: 4566720653156144606}
+  visaDurationText: {fileID: 3879414867155463696}
+  visaTypeText: {fileID: 6710742028664513435}
+  visaPurposeText: {fileID: 8831889357068857865}
+  visaChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7871679017664062320
 GameObject:
   m_ObjectHideFlags: 0

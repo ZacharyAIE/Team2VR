@@ -19,8 +19,5 @@ MonoBehaviour:
   - Gazorp
   - Vraeddiet
   - Qhuqno
-  characterSprites: []
-  purposes:
-  - WARRR!!!!
-  - Humanitarian Aid
-  - Journalism
+  characterModels:
+  - {fileID: 919132149155446097, guid: 6be5f32150708204a9b75c5f53feb988, type: 3}
