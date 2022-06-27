@@ -37,14 +37,22 @@ public class ShipInformationUI : MonoBehaviour
 
     public UnityEvent shipChanged;
 
-    [ContextMenu("Set Ship")]
-    public void SetShip(Ship s, CharacterInstanceData c)
+    
+    public void SetShip()
     {
-        ship = s;
-        character = c;
+        character = GameManager.Instance.trueCharacterInstanceData;
+        ship = character.ship;
+        
         ResetText();
         shipChanged.Invoke();
     }
+
+    [ContextMenu("Set Ship")]
+    public void Setup()
+    {
+        SetShip();
+    }
+
     private void Start()
     {
         navButton.onClick.AddListener(()=>EnableNav());
@@ -60,6 +68,7 @@ public class ShipInformationUI : MonoBehaviour
         shipDestinationText.text = null;
         planetDesignationText.text = null;
         planetStatusText.text = null;
+        shipCargoListText.text = null;
     }
 
     void EnableCargo()

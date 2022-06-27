@@ -19,6 +19,6 @@ namespace CharacterComparison
     public class PossibleVisaData : ScriptableObject
     {
         public List<string> nameList; // Master list of names
-        public List<Sprite> characterSprites;
+        public List<GameObject> characterModels;
     }
 }

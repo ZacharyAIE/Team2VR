@@ -41,6 +41,7 @@ namespace CharacterComparison
             shipType = shipTypeList.shipTypes[Random.Range(0, shipTypeList.shipTypes.Count)];
         }
 
+        // Get a random ID for the ship, for flavour text.
         public void SetShipID()
         {
             System.Random rnd = new System.Random();

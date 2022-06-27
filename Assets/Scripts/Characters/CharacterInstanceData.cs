@@ -23,6 +23,7 @@ namespace CharacterComparison
 
         [Header("VISA DATA")]
         public string visaName;
+        public GameObject visaCharacterModel;
         public VisaType visaType;
         public Planet visaPlanetOfOrigin;
         public Planet visaDestination;
@@ -42,6 +43,11 @@ namespace CharacterComparison
             if(gameObject.GetComponent<Ship>() == null)
                 ship = gameObject.AddComponent<Ship>();
             shipName = ship.shipName;
+        }
+
+        public void SetCharModel()
+        {
+            visaCharacterModel = visaData.characterModels[Random.Range(0, visaData.characterModels.Count)];
         }
 
         public string SetVisaName()
