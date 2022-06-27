@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4534564860203758159}
   - component: {fileID: 4534564860203758162}
   - component: {fileID: 4534564860203758157}
-  - component: {fileID: 4534564860203758163}
   - component: {fileID: 6779805299878176972}
+  - component: {fileID: 3747410594973891068}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,8 +49,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visaData: {fileID: 11400000, guid: cdced8e72a250894e866c5226f2759ef, type: 2}
   shipData: {fileID: 11400000, guid: 556ff739d81feba4c86bd02dc719a4b1, type: 2}
-  randomiseChance: 0.5
   shipSpawnPoint: {fileID: 0}
+  randomiseChance: 0.5
+  OnAnswerCorrect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAnswerIncorrect:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4534564860203758162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,21 +91,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &4534564860203758163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4534564860203758158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e41bcd747ee0ce43a26560c88d62a2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purposes:
-  - visaType: 0
-    restriction: 0
 --- !u!114 &6779805299878176972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,3 +108,16 @@ MonoBehaviour:
     _maxCargo: 0
   - _shipType: 2
     _maxCargo: 5
+--- !u!114 &3747410594973891068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b5d6fb422371c4d8fc0050a6c0a62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purposeCombo: {fileID: 11400000, guid: ec833700e5e68e54e80a9f23e5904ec0, type: 2}
