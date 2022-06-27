@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -11,6 +12,8 @@ public class Whiteboard : MonoBehaviour
     public Texture2D texture; 
     public Vector2 textureSize = new Vector2(2048, 2048);
 
+    
+
 
     /// <summary>
     /// setting the resolution as a new texture so we can manipulate it 
@@ -18,6 +21,8 @@ public class Whiteboard : MonoBehaviour
     private void Start()
     {
         texture = new Texture2D((int)textureSize.x, (int)textureSize.y);
+        Color[] color = Enumerable.Repeat(Color.white, (int)textureSize.x * (int)textureSize.y).ToArray();
+        texture.SetPixels(color);
         GetComponent<Renderer>().material.mainTexture = texture;
     }
 }
