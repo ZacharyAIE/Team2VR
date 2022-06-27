@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// This class manages the marker functions and handles all the drawing
+/// It has a simple algorithm that draws each picel induvidually on the texture and then applies it 
+/// </summary>
 public class WhiteboardMarker : MonoBehaviour
 {
     [SerializeField] private Transform tip;
@@ -26,7 +30,6 @@ public class WhiteboardMarker : MonoBehaviour
         tipHeight = tip.localScale.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Draw();
