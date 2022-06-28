@@ -40,7 +40,7 @@ public class ButtonPhysics : MonoBehaviour
 
         if (!isPressed && GetValue() + threshold >= 1 && !isActive)
                 Pressed();       
-        if (isPressed && GetValue() + threshold >= 0)
+        if (isPressed && GetValue() + threshold <= 0.1f)
                 Released();
     }
 
