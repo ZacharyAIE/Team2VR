@@ -7,6 +7,7 @@ namespace CharacterComparison
     public class GameManager : MonoBehaviour
     {
         public CharacterInstanceData trueCharacterInstanceData;
+        public int citationLimit = 5;
         ValidPurposes validPurposes;
         [Tooltip("Insert the list of possible data in the visa")]
         public PossibleVisaData visaData;

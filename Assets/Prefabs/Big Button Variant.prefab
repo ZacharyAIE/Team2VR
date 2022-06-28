@@ -7,9 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2881140203576896396, guid: 1e6651b398a1afd4f9df352bac6cc227, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881140203576896399, guid: 1e6651b398a1afd4f9df352bac6cc227, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.0399997
+      objectReference: {fileID: 0}
     - target: {fileID: 2881140204197507656, guid: 1e6651b398a1afd4f9df352bac6cc227, type: 3}
       propertyPath: m_Name
-      value: Big Button
+      value: Big Button Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2881140204197507659, guid: 1e6651b398a1afd4f9df352bac6cc227, type: 3}
       propertyPath: m_RootOrder

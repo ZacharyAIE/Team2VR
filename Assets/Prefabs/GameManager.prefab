@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6779805299878176972}
   - component: {fileID: 3747410594973891068}
   - component: {fileID: 6319751059685253138}
+  - component: {fileID: 1894675301202483044}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trueCharacterInstanceData: {fileID: 0}
+  citationLimit: 5
   visaData: {fileID: 11400000, guid: cdced8e72a250894e866c5226f2759ef, type: 2}
   shipData: {fileID: 11400000, guid: 556ff739d81feba4c86bd02dc719a4b1, type: 2}
   shipGameObject: {fileID: 0}
@@ -136,5 +138,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35b3c634305399479f4c658ace4beab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
+  score: 0
+  incorrectScore: 0
+  highScore: 0
+  incorrectHighScore: 0
+  OnScoresChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1894675301202483044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124cdefb599bf4349b8f4ec5d6722943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 300
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  OnTimerZeroed:
+    m_PersistentCalls:
+      m_Calls: []
