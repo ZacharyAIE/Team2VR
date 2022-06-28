@@ -22,6 +22,7 @@ public class ButtonPhysics : MonoBehaviour
     [SerializeField] private float deadZone = 0.025f;
 
     private bool isPressed;
+    private bool isActive;
     private Vector3 startPos;
     private ConfigurableJoint joint;
 
@@ -36,10 +37,11 @@ public class ButtonPhysics : MonoBehaviour
 
     private void Update()
     {
-        if (!isPressed && GetValue() + threshold >= 1)
-            Pressed();
-        if(isPressed && GetValue() + threshold >= 0)
-            Released();
+
+        if (!isPressed && GetValue() + threshold >= 1 && !isActive)
+                Pressed();       
+        if (isPressed && GetValue() + threshold >= 0)
+                Released();
     }
 
     /// <summary>
@@ -62,7 +64,9 @@ public class ButtonPhysics : MonoBehaviour
     private void Pressed()
     {
         isPressed = true;
+        isActive = true;
         onPressed.Invoke();
+        Debug.Log("pressed");
     }
 
     /// <summary>
@@ -71,6 +75,8 @@ public class ButtonPhysics : MonoBehaviour
     private void Released()
     {
         isPressed = false;
+        isActive = false;
         onReleased.Invoke();
+        Debug.Log("Not pressed");
     }
 }
