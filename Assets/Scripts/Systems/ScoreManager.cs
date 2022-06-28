@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine.Events;
 
 //To DO: add "ScoreManager.instance.AddPoints();" to the script where we want the points to be added
 //To DO: add "ScoreManager.instance.RemovePoints();" to the script where we want the points to be taken away
@@ -13,13 +10,11 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
-    public TextMeshPro scoreText;
-    public TextMeshPro highScoreText;
-
-
-
-    private int score = 0;
-    private int highScore = 0;
+    public int score = 0;
+    public int incorrectScore = 0;
+    public int highScore = 0;
+    public int incorrectHighScore = 0;
+    public UnityEvent OnScoresChanged;
 
     // On awake create an instanse of this class 
     private void Awake()
@@ -31,10 +26,7 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         highScore = PlayerPrefs.GetInt("Highscore", 0);
-        //   XX POINTS
-        // HIGHSCORE: XX
-        scoreText.text = score.ToString() + "POINTS";
-        highScoreText.text = "HIGHSCORE" + highScore.ToString();
+        highScore = PlayerPrefs.GetInt("Failure Highscore", 0);
     }
 
     // Add points, update the UI and store the highscore in playerprefrance for next game
@@ -42,8 +34,16 @@ public class ScoreManager : MonoBehaviour
     public void AddPoints(int pointsToAdd)
     {
         score += pointsToAdd;
-        scoreText.text = score.ToString() + "POINTS";
         if (highScore < score)
             PlayerPrefs.SetInt("Highscore", score);
+        OnScoresChanged.Invoke();
+    }
+
+    public void AddIncorrectPoints(int pointsToAdd)
+    {
+        incorrectScore += pointsToAdd;
+        if (incorrectHighScore < incorrectScore)
+            PlayerPrefs.SetInt("Failure_Highscore", incorrectScore);
+        OnScoresChanged.Invoke();
     }
 }
