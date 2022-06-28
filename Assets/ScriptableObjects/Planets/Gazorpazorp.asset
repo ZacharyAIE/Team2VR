@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Gazorpazorp
   m_EditorClassIdentifier: 
   planetName: Gazorpazorp
-  planetModel: {fileID: 100000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
+  designation: 
+  societalStatus: 
+  planetModel: {fileID: 2288078969974069955, guid: 9bc589310b725cf47a3b07d3a1a25b39, type: 3}
   restrictionAmount: 2
   restrictedItemAmount: 1
