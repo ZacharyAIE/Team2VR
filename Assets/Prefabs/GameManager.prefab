@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4534564860203758157}
   - component: {fileID: 6779805299878176972}
   - component: {fileID: 3747410594973891068}
+  - component: {fileID: 6319751059685253138}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07216bf0414ab1443aeb051f283720da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trueCharacterInstanceData: {fileID: 0}
   visaData: {fileID: 11400000, guid: cdced8e72a250894e866c5226f2759ef, type: 2}
   shipData: {fileID: 11400000, guid: 556ff739d81feba4c86bd02dc719a4b1, type: 2}
+  shipGameObject: {fileID: 0}
   shipSpawnPoint: {fileID: 0}
   randomiseChance: 0.5
   OnAnswerCorrect:
@@ -121,3 +124,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purposeCombo: {fileID: 11400000, guid: ec833700e5e68e54e80a9f23e5904ec0, type: 2}
+--- !u!114 &6319751059685253138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534564860203758158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35b3c634305399479f4c658ace4beab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
