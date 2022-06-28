@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Graybox_level.unity
     guid: 2b6438300ad393a4897961d66cfc92d9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GreyBox.unity
     guid: b3015950a477a3341951653cddb6841e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Test scene.unity
-    guid: 52d20df9df39bb145b7bcb8e0becbf49
+    guid: d129b2a497f4eed46bc23bb56fc8c6fe
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 65c75c1f7ac051d45bdde398dc61c7d5, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6f8f2eaf1a12f7a48b48cd78fc0d7d77, type: 2}
