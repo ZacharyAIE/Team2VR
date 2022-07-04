@@ -16,5 +16,5 @@ MonoBehaviour:
   designation: 
   societalStatus: 
   planetModel: {fileID: 2288078969974069955, guid: 9bc589310b725cf47a3b07d3a1a25b39, type: 3}
-  restrictionAmount: 2
-  restrictedItemAmount: 1
+  restrictionAmount: 1
+  restrictedItemAmount: 3

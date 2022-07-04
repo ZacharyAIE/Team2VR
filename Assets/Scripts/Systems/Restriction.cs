@@ -12,6 +12,7 @@ namespace CharacterComparison
         Disaster,
         Piracy,
         Conflict,
-        Restricted
+        Restricted,
+        Holiday  
     }
 }
