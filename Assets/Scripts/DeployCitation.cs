@@ -20,6 +20,7 @@ public class DeployCitation : MonoBehaviour
         {
             maxCitationsReached.Invoke();
         }
+        currentCitationCount++;
         var temp = Instantiate(failCitation, exitPoint.position, Quaternion.identity);
         temp.transform.parent = null;
         temp.GetComponent<Rigidbody>().AddForce(exitPoint.forward * exitSpeed);
