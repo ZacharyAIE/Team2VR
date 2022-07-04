@@ -18,9 +18,11 @@ namespace CharacterComparison
         public Transform shipSpawnPoint;
         [Tooltip("Chance for the character to have randomised data")]
         public float randomiseChance = 0.8f; // % as a decimal
+        public CharacterSwapper characterCamera;
         bool isCharacterAcceptable;
         public UnityEvent OnAnswerCorrect;
         public UnityEvent OnAnswerIncorrect;
+        public UnityEvent OnCharacterRefresh;
         public ParticleSystem explosionParticleSystem;
 
 
@@ -56,6 +58,8 @@ namespace CharacterComparison
         public void ResetGameState()
         {
             explosionParticleSystem.Play();
+
+            characterCamera.currentModel = null;
             
             Destroy(shipGameObject);
             trueCharacterInstanceData.ResetShip();
@@ -63,8 +67,6 @@ namespace CharacterComparison
             
             shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
             shipGameObject.transform.parent = shipSpawnPoint;
-
-
         }
 
         private void RandomiseData(CharacterInstanceData data)
@@ -96,6 +98,7 @@ namespace CharacterComparison
             trueCharacterInstanceData.SetPlanetOfOrigin();
             trueCharacterInstanceData.SetDestination(trueCharacterInstanceData.shipPlanetOfOrigin); // Dont include our origin.
             trueCharacterInstanceData.SetPurpose();
+            trueCharacterInstanceData.SetCharModel();
             trueCharacterInstanceData.stayDuration = Random.Range(0, 52);
 
             // Randomise it
@@ -176,6 +179,11 @@ namespace CharacterComparison
                 OnAnswerCorrect.Invoke();
             else
                 OnAnswerIncorrect.Invoke();
+        }
+
+        public void InvokeCharacterRefresh()
+        {
+            OnCharacterRefresh.Invoke();
         }
     }
 }
