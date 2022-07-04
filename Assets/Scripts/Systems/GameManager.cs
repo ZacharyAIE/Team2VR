@@ -21,6 +21,7 @@ namespace CharacterComparison
         bool isCharacterAcceptable;
         public UnityEvent OnAnswerCorrect;
         public UnityEvent OnAnswerIncorrect;
+        public ParticleSystem explosionParticleSystem;
 
 
 
@@ -54,12 +55,16 @@ namespace CharacterComparison
         [ContextMenu("Reset Character")]
         public void ResetGameState()
         {
+            explosionParticleSystem.Play();
+            
             Destroy(shipGameObject);
             trueCharacterInstanceData.ResetShip();
             GenerateCharacter();
             
             shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
             shipGameObject.transform.parent = shipSpawnPoint;
+
+
         }
 
         private void RandomiseData(CharacterInstanceData data)
