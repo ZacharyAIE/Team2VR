@@ -24,7 +24,7 @@ public class WhiteboardEraser : MonoBehaviour
         //renderer = whiteboard.GetComponent<Renderer>().material.color;
         renderer = eraser.GetComponent<Renderer>();
         colors = Enumerable.Repeat(renderer.material.color, eraserSize * eraserSize).ToArray();
-        eraserHight = eraser.localScale.y;
+        eraserHight = eraser.localScale.y/10;
     }
 
     void Update()
@@ -34,7 +34,7 @@ public class WhiteboardEraser : MonoBehaviour
 
     private void Erase()
     {
-        if (Physics.Raycast(eraser.position, transform.up, out touch, eraserHight))
+        if (Physics.Raycast(eraser.position, -transform.up, out touch, eraserHight))
         {
             // Check if we actually drwaing on a whiteboard 
             if (touch.transform.CompareTag("Whiteboard"))
@@ -81,6 +81,7 @@ public class WhiteboardEraser : MonoBehaviour
                 touchedLastFrame = true;
                 return;
             }
+            return;
         }
 
         // If we didn't go trough any of the above, delete the chached whiteboard and last frame touched
