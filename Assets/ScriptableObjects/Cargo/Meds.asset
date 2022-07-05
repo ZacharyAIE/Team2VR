@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Meds
   m_EditorClassIdentifier: 
   itemName: Medication
-  isLegal: 0
+  isLegal: 1
