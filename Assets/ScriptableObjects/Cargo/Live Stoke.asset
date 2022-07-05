@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Live Stoke
   m_EditorClassIdentifier: 
   itemName: Live Stoke
-  isLegal: 0
+  isLegal: 1

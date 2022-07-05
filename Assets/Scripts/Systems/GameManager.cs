@@ -96,7 +96,7 @@ namespace CharacterComparison
                 data.visaPlanetOfOrigin = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
                 data.shipDestination = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
                 data.visaDestination = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
-
+                data.visaType = (VisaType)Random.Range(0, System.Enum.GetNames(typeof(Restriction)).Length);
 
             }
         }
@@ -111,9 +111,10 @@ namespace CharacterComparison
             trueCharacterInstanceData.shipData = shipData;
             trueCharacterInstanceData.SetVisaName();
             trueCharacterInstanceData.SetShip();
-            trueCharacterInstanceData.SetVisaType();
+            
             trueCharacterInstanceData.SetPlanetOfOrigin();
             trueCharacterInstanceData.SetDestination(trueCharacterInstanceData.shipPlanetOfOrigin); // Dont include our origin.
+            trueCharacterInstanceData.SetVisaType();
             trueCharacterInstanceData.SetPurpose();
             trueCharacterInstanceData.SetCharModel();
             trueCharacterInstanceData.stayDuration = Random.Range(0, 52);
@@ -147,15 +148,12 @@ namespace CharacterComparison
         {
             if(c.visaDestination.restrictions.Count != 0)
             {
-                foreach (Restriction r in c.visaDestination.restrictions)
+                foreach (Purpose p in validPurposes.purposeCombo.purposes)
                 {
-                    foreach (Purpose p in validPurposes.purposeCombo.purposes)
+                    
+                    if (c.visaType == p.visaType && c.visaDestination.restrictions.Contains(p))
                     {
-                        //
-                        if (p.Compare(c.visaType, r))
-                        {
-                            return true;
-                        }
+                        return true;
                     }
                 }
                 return false;

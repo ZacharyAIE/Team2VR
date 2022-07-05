@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Food
   m_EditorClassIdentifier: 
   itemName: Food
-  isLegal: 0
+  isLegal: 1

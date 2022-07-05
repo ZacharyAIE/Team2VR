@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetData: {fileID: 0}
-  restrictions: 
+  cargoList: {fileID: 0}
+  validPurposeCombos: {fileID: 11400000, guid: ec833700e5e68e54e80a9f23e5904ec0, type: 2}
+  restrictions: []
   restrictedItems: []

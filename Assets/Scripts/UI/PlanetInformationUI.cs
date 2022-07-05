@@ -45,9 +45,9 @@ public class PlanetInformationUI : MonoBehaviour
 
             // Populate travel restrictions
             travelRestrictionText.text = markupFormattingText;
-            foreach (Restriction r in planetToDisplay.restrictions)
+            foreach (Purpose r in planetToDisplay.restrictions)
             {
-                travelRestrictionText.text = travelRestrictionText.text + r.ToString() + "\n";
+                travelRestrictionText.text = travelRestrictionText.text + r.restriction.ToString() + "\n";
             }
 
             // Populate goods restrictions

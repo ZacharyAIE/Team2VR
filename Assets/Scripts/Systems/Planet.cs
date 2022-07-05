@@ -13,19 +13,20 @@ namespace CharacterComparison
     {
         public PlanetData planetData;
         public CargoList cargoList;
-        public List<Restriction> restrictions;
+        public ValidPurposeCombo validPurposeCombos;
+        public List<Purpose> restrictions;
         public List<CargoItem> restrictedItems;
 
-        private void Start()
+        private void Awake()
         {
             
             // Set random travel restrictions
             for (int i = 0; i < planetData.restrictionAmount; i++)
             {
-                var rand = UnityEngine.Random.Range(0, Enum.GetNames(typeof(Restriction)).Length);
-                if (!restrictions.Contains((Restriction)rand))
+                var rand = validPurposeCombos.purposes[UnityEngine.Random.Range(0, validPurposeCombos.purposes.Count)];
+                if (!validPurposeCombos.purposes.Contains(rand)) ;
                 {
-                    restrictions.Add((Restriction)rand);
+                    validPurposeCombos.purposes.Add(rand);
                 }
             }
 
