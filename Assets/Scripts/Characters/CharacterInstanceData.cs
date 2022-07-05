@@ -53,6 +53,7 @@ namespace CharacterComparison
         public string SetVisaName()
         {
             visaName = visaData.nameList[Random.Range(0, visaData.nameList.Count)]; // Turn this into a function with the list as a parameter
+            // If the ship owner name isn't set yet, do it now
             if(shipOwnerName == null)
                 shipOwnerName = visaName;
 
@@ -69,6 +70,7 @@ namespace CharacterComparison
         {
             visaPlanetOfOrigin = planetList.planetList[Random.Range(0, planetList.planetList.Count)];
 
+            // If the ship origin isn't set yet, do it now
             if (shipPlanetOfOrigin == null)
                 shipPlanetOfOrigin = visaPlanetOfOrigin;
 

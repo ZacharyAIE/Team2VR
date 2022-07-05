@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class draws lines between a list of <see cref="Vector3"/> points
+/// </summary>
+[RequireComponent(typeof(LineRenderer))]
 public class LineConnections : MonoBehaviour
 {
     public List<GameObject> objects;

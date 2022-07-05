@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class moves an object through a list of <see cref="Node"/>
+/// </summary>
 public class MoveToward : MonoBehaviour
 {
     public List<Node> travelPoints;
