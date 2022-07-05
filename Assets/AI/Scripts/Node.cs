@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
+/// <summary>
+/// This class contains data for a movement Node.
+/// Any objects that are used with this system require a <see cref="Collider"/>
+/// </summary>
 public class Node : MonoBehaviour
 {
     public bool completed = false;

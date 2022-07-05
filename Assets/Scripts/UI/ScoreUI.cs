@@ -15,7 +15,7 @@ public enum ScoreUIType
 }
 
 /// <summary>
-/// This class is responsible for populating the score UI elements. It refers to the instance of ScoreManager to retrieve its data.
+/// This class is responsible for populating the score UI elements. It refers to the instance of <see cref="ScoreManager"/> to retrieve its data.
 /// </summary>
 public class ScoreUI : MonoBehaviour
 {

@@ -3,6 +3,9 @@ using UnityEngine.Events;
 using TMPro;
 using CharacterComparison;
 
+/// <summary>
+/// This class is responsible for populating the Visa UI panel with data from <see cref="CharacterInstanceData"/>
+/// </summary>
 public class VisaInformationUI : MonoBehaviour
 {
     CharacterInstanceData character;

@@ -5,15 +5,9 @@ using UnityEngine;
 namespace CharacterComparison
 {
 
-    public enum ShipTypes
-    {
-        Cargo,
-        Personal,
-        Transport,
-        Cruiser
-    }
-
-    // This class stores data about the ship specifically
+    /// <summary>
+    /// This class stores ship specific data
+    /// </summary>
     public class Ship : MonoBehaviour
     {
         private CargoList cargoList;

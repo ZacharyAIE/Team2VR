@@ -4,6 +4,10 @@ using UnityEngine.Events;
 using TMPro;
 using CharacterComparison;
 
+
+/// <summary>
+/// This class is responsible for populating the Ship UI panel with data from <see cref="CharacterInstanceData"/> and <see cref="Ship"/>
+/// </summary>
 public class ShipInformationUI : MonoBehaviour
 {
     public Ship ship;

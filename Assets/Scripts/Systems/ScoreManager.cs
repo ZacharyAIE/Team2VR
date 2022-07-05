@@ -1,11 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-//To DO: add "ScoreManager.instance.AddPoints();" to the script where we want the points to be added
-//To DO: add "ScoreManager.instance.RemovePoints();" to the script where we want the points to be taken away
-
-
-// This class is responsible for giving points, it stores the last score in player pref
+/// <summary>
+/// This class is responsible for giving points, it stores the last score in <see cref="PlayerPrefs"/>
+/// </summary>
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;

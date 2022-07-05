@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using CharacterComparison;
 
+/// <summary>
+/// This class is responsible for instantiating citations.
+/// </summary>
 public class DeployCitation : MonoBehaviour
 {
     public FailCitationUI failCitation;
@@ -13,6 +16,9 @@ public class DeployCitation : MonoBehaviour
     public float exitSpeed = 50;
     private int currentCitationCount;
 
+    /// <summary>
+    /// Instantiates an object with a <see cref="FailCitationUI"/>
+    /// </summary>
     public void GenerateCitation()
     {
         // If we hit the max count, run an event - lose the game
