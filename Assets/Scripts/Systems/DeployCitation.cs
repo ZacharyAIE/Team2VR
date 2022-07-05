@@ -22,7 +22,7 @@ public class DeployCitation : MonoBehaviour
     public void GenerateCitation()
     {
         // If we hit the max count, run an event - lose the game
-        if(currentCitationCount > GameManager.Instance.citationLimit)
+        if(currentCitationCount > GameManager.Instance.failLimit)
         {
             maxCitationsReached.Invoke();
         }

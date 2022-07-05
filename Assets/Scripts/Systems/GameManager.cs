@@ -9,24 +9,33 @@ namespace CharacterComparison
     /// </summary>
     public class GameManager : MonoBehaviour
     {
-        public CharacterInstanceData trueCharacterInstanceData;
-        public int citationLimit = 5;
-        ValidPurposes validPurposes;
+        [Header("Data Lists")]
         [Tooltip("Insert the list of possible data in the visa")]
         public PossibleVisaData visaData;
         [Tooltip("Insert the list of possible data for ship data")]
         public PossibleShipData shipData;
-        public GameObject shipGameObject;
+
+        [Header("Settings")]
+        [Tooltip("How many times the player can choose the wrong option")] 
+        public int failLimit = 5;
         [Tooltip("The place where the ship should be instantiated when the character is generated")]
         public Transform shipSpawnPoint;
         [Tooltip("Chance for the character to have randomised data")]
         public float randomiseChance = 0.8f; // % as a decimal
+        public ParticleSystem explosionParticleSystem;
+
+
+        public CharacterInstanceData trueCharacterInstanceData;
+        
+        ValidPurposes validPurposes;
+        
+        public GameObject shipGameObject;
+        
         public CharacterSwapper characterCamera;
         bool isCharacterAcceptable;
         public UnityEvent OnAnswerCorrect;
         public UnityEvent OnAnswerIncorrect;
         public UnityEvent OnCharacterRefresh;
-        public ParticleSystem explosionParticleSystem;
 
 
 
@@ -53,15 +62,13 @@ namespace CharacterComparison
             shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
             shipGameObject.transform.parent = shipSpawnPoint;
 
-            Debug.Log(IsCharacterCorrect(trueCharacterInstanceData));
+            
         }
 
         [ContextMenu("Reset Character")]
         public void ResetGameState()
         {
             explosionParticleSystem.Play();
-
-            characterCamera.currentModel = null;
             
             Destroy(shipGameObject);
             trueCharacterInstanceData.ResetShip();
@@ -89,6 +96,8 @@ namespace CharacterComparison
                 data.visaPlanetOfOrigin = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
                 data.shipDestination = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
                 data.visaDestination = data.planetList.planetList[Random.Range(0, data.planetList.planetList.Count)];
+
+
             }
         }
 
@@ -111,6 +120,7 @@ namespace CharacterComparison
 
             // Randomise it
             RandomiseData(trueCharacterInstanceData);
+            Debug.Log(IsCharacterCorrect(trueCharacterInstanceData));
         }
 
         /// <summary>

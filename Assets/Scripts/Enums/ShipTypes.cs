@@ -5,7 +5,7 @@ using UnityEngine;
 namespace CharacterComparison
 {
     /// <summary>
-    /// All possible ship types
+    /// This stores all possible ship types
     /// </summary>
     public enum ShipTypes
     {

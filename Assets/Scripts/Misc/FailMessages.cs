@@ -14,5 +14,3 @@ namespace CharacterComparison
         [Multiline(10)] public List<string> possibleFailMessages;
     }
 }
-
-
