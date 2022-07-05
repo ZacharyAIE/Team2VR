@@ -23,7 +23,9 @@ MonoBehaviour:
     restriction: 3
   - visaType: 2
     restriction: 1
-  - visaType: 1
-    restriction: 4
   - visaType: 3
     restriction: 4
+  - visaType: 1
+    restriction: 4
+  - visaType: 0
+    restriction: 0
