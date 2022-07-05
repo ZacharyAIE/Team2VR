@@ -141,19 +141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029504295
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882426, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -246,6 +246,14 @@ PrefabInstance:
     - target: {fileID: 392152873197827009, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_isRightToLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117931669502917413, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117931669502917413, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7112951052669532585, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
