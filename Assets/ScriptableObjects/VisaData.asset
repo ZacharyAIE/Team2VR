@@ -22,3 +22,6 @@ MonoBehaviour:
   - Stanley Prime
   characterModels:
   - {fileID: 7512977660929923733, guid: b3b66377fe6700747900c26c69e6df42, type: 3}
+  - {fileID: 1820643403354897699, guid: bf33a170469154d478c02246078d2be6, type: 3}
+  - {fileID: 3475509485051774290, guid: ecda14fe2f5bc014692605b712005e11, type: 3}
+  - {fileID: 7933668777797588748, guid: 9da2ef4e4c75b484989ba9d17ad44257, type: 3}
