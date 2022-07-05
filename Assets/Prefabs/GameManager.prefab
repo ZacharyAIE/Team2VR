@@ -56,12 +56,17 @@ MonoBehaviour:
   shipGameObject: {fileID: 0}
   shipSpawnPoint: {fileID: 0}
   randomiseChance: 0.5
+  characterCamera: {fileID: 0}
   OnAnswerCorrect:
     m_PersistentCalls:
       m_Calls: []
   OnAnswerIncorrect:
     m_PersistentCalls:
       m_Calls: []
+  OnCharacterRefresh:
+    m_PersistentCalls:
+      m_Calls: []
+  explosionParticleSystem: {fileID: 0}
 --- !u!114 &4534564860203758162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +83,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0cc9423fce09a5c4bb45d730453bca9f, type: 2}
   - {fileID: 11400000, guid: 7ef355b8e1b898d48b45dd2f4f19ad15, type: 2}
   - {fileID: 11400000, guid: 86cbe6b94c0428f4c8ae86d8d472bf54, type: 2}
+  - {fileID: 11400000, guid: c3e9708bd0a61f34f9e2ff2a9ce5f9c8, type: 2}
+  - {fileID: 11400000, guid: be591c6f732443747a51ba35bc1efcd2, type: 2}
+  - {fileID: 11400000, guid: 5c53a48ede833bc419e0216983f65b8c, type: 2}
+  - {fileID: 11400000, guid: 94edc089bde73c54c95667a8a0d39592, type: 2}
 --- !u!114 &4534564860203758157
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,5 +13,38 @@ MonoBehaviour:
   m_Name: Fail Messages
   m_EditorClassIdentifier: 
   possibleFailMessages:
-  - "Come on broski, you can do better than that.\n\nYou let in someone who could
-    have blown up the galaxy. \n\nDo Better.\n\nYours Sincerely,\n- Evil Space Government"
+  - 'Come on broski, you can do better than that.
+
+
+    You were trained for this.
+
+
+    Do
+    Better.
+
+
+    Yours Sincerely,
+
+    - Evil Space Government'
+  - 'Wrong.
+
+
+    Yours Sincerely,
+
+    - Evil Space Government'
+  - 'What are you even doing here!?
+
+
+    Yours Sincerely,
+
+    - Evil Space Government'
+  - 'How did you get that wrong!?
+
+
+    Who is your supervisor?
+
+
+    Yours Sincerely,
+
+    -
+    Evil Space Government'
