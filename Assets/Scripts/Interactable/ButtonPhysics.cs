@@ -61,6 +61,7 @@ public class ButtonPhysics : MonoBehaviour
     /// <summary>
     /// sets <param name="isPressed">Bool.</param> to true and invoke the OnPressed event 
     /// </summary>
+    [ContextMenu("Pressed")]
     private void Pressed()
     {
         isPressed = true;
@@ -72,6 +73,7 @@ public class ButtonPhysics : MonoBehaviour
     /// <summary>
     /// sets <param name="isPressed">Bool.</param> to false and invoke the OnPressed event 
     /// </summary>
+    [ContextMenu("Released")]
     private void Released()
     {
         isPressed = false;

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// This class is used to display a timer on a UI Canvas
+/// Taken from https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/
 /// </summary>
 public class Timer : MonoBehaviour
 {
