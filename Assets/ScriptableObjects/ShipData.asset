@@ -18,10 +18,10 @@ MonoBehaviour:
   - USS Ugh Lee
   - ISS Dumby
   shipModels:
-  - {fileID: 5492094437747727853, guid: 9aaf5c2c3d9100d41a3bdf123d8ac9b8, type: 3}
-  - {fileID: 5440250289501846930, guid: b7c28cd5786329e4c9af3aa30447984c, type: 3}
-  - {fileID: 7530145637334651537, guid: c05b9874bae51d44cabdb9b516bd38e4, type: 3}
-  - {fileID: 5229423095082061337, guid: dadc43b4e364641468abc6479ddb6cf6, type: 3}
   - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
-  - {fileID: 6018418494186110480, guid: f4ce8f52a1b8657478d88fcedfe3c801, type: 3}
-  - {fileID: 365580034465073175, guid: 15fbce2fe18a5564f851cbf6a232a1a7, type: 3}
+  - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
+  - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
+  - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
+  - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
+  - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
+  - {fileID: 749019747808117765, guid: b8af2beb1bea2b84985240d892815983, type: 3}
