@@ -4,17 +4,10 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    // This enum stores all visa types, Designers, this is for you :)
-    public enum VisaType
-    {
-        Humanitarian,
-        Tourist,
-        Military,
-        Citizen,
-        Diplomatic
-    }
 
-    // Stores all possible character names 
+    /// <summary>
+    /// Stores all possible character names 
+    /// </summary>
     [CreateAssetMenu(menuName = "Character/Visa Data")]
     public class PossibleVisaData : ScriptableObject
     {

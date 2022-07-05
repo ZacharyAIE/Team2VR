@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace CharacterComparison 
-{ 
-    // The object that determines a correct visa type to restriction combo
+{
+    /// <summary>
+    /// This object determines a correct visa type to restriction combo
+    /// This is used in <see cref="ValidPurposeCombo"/> to keep a list of purpose to <see cref="Restriction"/> combinations
+    /// </summary>
     [System.Serializable]
     public struct Purpose
     {

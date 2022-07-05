@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
+
+/// <summary>
+/// This class is used to display a timer on a UI Canvas
+/// </summary>
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 300;
+    [Header("In Seconds")]public float timeRemaining = 300;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
     public UnityEvent OnTimerZeroed;

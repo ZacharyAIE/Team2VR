@@ -3,7 +3,10 @@ using UnityEngine.Events;
 
 namespace CharacterComparison 
 { 
-
+    /// <summary>
+    /// This is the main class that handles game state and has access to all data on characters.
+    /// The GameManager calls on various classes to generate character data then compares data points to determine if the character generated is acceptable.
+    /// </summary>
     public class GameManager : MonoBehaviour
     {
         public CharacterInstanceData trueCharacterInstanceData;
@@ -46,7 +49,6 @@ namespace CharacterComparison
             // Create the Character Data Instances
             trueCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
             validPurposes = GetComponent<ValidPurposes>();
-            //falseCharacterInstanceData = gameObject.AddComponent<CharacterInstanceData>();
             GenerateCharacter();
             shipGameObject = Instantiate(trueCharacterInstanceData.shipData.shipModels[Random.Range(0, shipData.shipNames.Count)], shipSpawnPoint.position, Quaternion.identity);
             shipGameObject.transform.parent = shipSpawnPoint;
@@ -69,11 +71,15 @@ namespace CharacterComparison
             shipGameObject.transform.parent = shipSpawnPoint;
         }
 
+        /// <summary>
+        /// Randomise the character data with randomiseChance
+        /// </summary>
+        /// <param name="data"></param>
         private void RandomiseData(CharacterInstanceData data)
         {
             var seed = Random.value;
 
-            // Randomise the name with 20% chance
+            // If the generated value is less than randomise chance
             if(seed < randomiseChance)
             {
                 data.visaName = data.visaData.nameList[Random.Range(0, data.visaData.nameList.Count)];
@@ -86,7 +92,9 @@ namespace CharacterComparison
             }
         }
 
-        // Generate the data for the character
+        /// <summary>
+        /// Calls all the Set functions on the character data
+        /// </summary>
         private void GenerateCharacter()
         {
             // Set up the character's real data
@@ -105,7 +113,11 @@ namespace CharacterComparison
             RandomiseData(trueCharacterInstanceData);
         }
 
-        // These functions check whether the character would be considered correct.
+        /// <summary>
+        /// Check whether the character would be considered correct.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         private bool IsCharacterCorrect(CharacterInstanceData c)
         {
             if (CheckPurpose(c) && CheckName(c) && CheckOrigin(c) && CheckDestination(c))
@@ -120,6 +132,7 @@ namespace CharacterComparison
 
             
         }
+
         private bool CheckPurpose(CharacterInstanceData c)
         {
             if(c.visaDestination.restrictions.Count != 0)
@@ -128,6 +141,7 @@ namespace CharacterComparison
                 {
                     foreach (Purpose p in validPurposes.purposeCombo.purposes)
                     {
+                        //
                         if (p.Compare(c.visaType, r))
                         {
                             return true;

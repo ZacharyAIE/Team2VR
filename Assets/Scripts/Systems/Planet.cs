@@ -5,7 +5,10 @@ using UnityEngine;
 
 namespace CharacterComparison
 {
-    // This class contains data about a planet.
+    /// <summary>
+    /// This class contains data about a planet.
+    /// It uses data from a <see cref="CargoList"/> and <see cref="PlanetData"/>
+    /// </summary>
     public class Planet : MonoBehaviour
     {
         public PlanetData planetData;
