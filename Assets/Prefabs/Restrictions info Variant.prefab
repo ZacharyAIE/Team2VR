@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882182, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_Name
-      value: Restrictions info
+      value: Restrictions info Variant
       objectReference: {fileID: 0}
     - target: {fileID: 392152872672882424, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -247,5 +247,6 @@ PrefabInstance:
       propertyPath: m_isRightToLeft
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7112951052669532585, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
