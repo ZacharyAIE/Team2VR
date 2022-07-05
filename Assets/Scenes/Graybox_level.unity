@@ -399,6 +399,34 @@ PrefabInstance:
       propertyPath: OnAnswerIncorrect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.data[0]._maxCargo
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.data[1]._maxCargo
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.data[2]._maxCargo
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.data[2]._shipType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.data[3]._maxCargo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779805299878176972, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
+      propertyPath: shipTypes.Array.data[3]._shipType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 472c0aeb99a4f94489e92f49e3891e6c, type: 3}
 --- !u!114 &60698737 stripped

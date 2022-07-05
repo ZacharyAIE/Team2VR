@@ -129,7 +129,7 @@ namespace CharacterComparison
         /// <returns></returns>
         private bool IsCharacterCorrect(CharacterInstanceData c)
         {
-            if (CheckPurpose(c) && CheckName(c) && CheckOrigin(c) && CheckDestination(c))
+            if (CheckPurpose(c) && CheckName(c) && CheckOrigin(c) && CheckDestination(c) && CheckCargo(c))
             {
                 isCharacterAcceptable = true;
             }
@@ -140,6 +140,18 @@ namespace CharacterComparison
             return isCharacterAcceptable;
 
             
+        }
+
+        private bool CheckCargo(CharacterInstanceData c)
+        {
+            foreach(CargoItem cargo in c.ship.cargoItems)
+            {
+                if (c.shipDestination.restrictedItems.Contains(cargo))
+                    return false;
+                else
+                    return true;
+            }
+            return false;
         }
 
         private bool CheckPurpose(CharacterInstanceData c)
