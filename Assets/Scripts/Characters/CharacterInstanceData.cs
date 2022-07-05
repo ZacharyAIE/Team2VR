@@ -5,7 +5,8 @@ using UnityEngine;
 namespace CharacterComparison
 {
     /// <summary>
-    /// This class stores all data about the character
+    /// This class stores and generates all data about the character
+    /// It takes data from <see cref="PossibleShipData"/>, <see cref="PossibleVisaData"/>, <see cref="ValidPurposes"/> and <see cref="PlanetList"/>
     /// </summary>
     public class CharacterInstanceData : MonoBehaviour
     {
