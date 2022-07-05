@@ -24,9 +24,9 @@ namespace CharacterComparison
             for (int i = 0; i < planetData.restrictionAmount; i++)
             {
                 var rand = validPurposeCombos.purposes[UnityEngine.Random.Range(0, validPurposeCombos.purposes.Count)];
-                if (!validPurposeCombos.purposes.Contains(rand)) ;
+                if (restrictions.FindIndex(p => ((p.restriction == rand.restriction) && (p.visaType == rand.visaType))) == -1)
                 {
-                    validPurposeCombos.purposes.Add(rand);
+                    restrictions.Add(rand);
                 }
             }
 
