@@ -16,6 +16,7 @@ MonoBehaviour:
   - SS Yur-Aynus
   - HMS Kyssmai-Ars
   - USS Ugh Lee
+  - ISS Dumby
   shipModels:
   - {fileID: 5492094437747727853, guid: 9aaf5c2c3d9100d41a3bdf123d8ac9b8, type: 3}
   - {fileID: 5440250289501846930, guid: b7c28cd5786329e4c9af3aa30447984c, type: 3}
