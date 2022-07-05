@@ -68,8 +68,6 @@ namespace CharacterComparison
         [ContextMenu("Reset Character")]
         public void ResetGameState()
         {
-            explosionParticleSystem.Play();
-            
             Destroy(shipGameObject);
             trueCharacterInstanceData.ResetShip();
             GenerateCharacter();
