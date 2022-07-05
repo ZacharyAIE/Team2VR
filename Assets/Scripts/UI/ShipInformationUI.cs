@@ -27,6 +27,7 @@ public class ShipInformationUI : MonoBehaviour
     public TMP_Text shipNameText;
     public TMP_Text shipOwnerText;
     public TMP_Text shipClassText;
+    public TMP_Text shipOrigin;
 
     [Header("Ship Destination Data")]
     public TMP_Text shipDestinationText;
@@ -73,6 +74,7 @@ public class ShipInformationUI : MonoBehaviour
         planetDesignationText.text = null;
         planetStatusText.text = null;
         shipCargoListText.text = null;
+        shipOrigin.text = null;
     }
 
     void EnableCargo()
@@ -98,7 +100,8 @@ public class ShipInformationUI : MonoBehaviour
         shipDestinationText.text = character.shipDestination.planetData.planetName;
         planetDesignationText.text = character.shipDestination.planetData.designation;
         planetStatusText.text = character.shipDestination.planetData.societalStatus;
-        foreach(CargoItem c in ship.cargoItems)
+        shipOrigin.text = character.shipPlanetOfOrigin.planetData.planetName;
+        foreach (CargoItem c in ship.cargoItems)
         {
             shipCargoListText.text = shipCargoListText.text + c.name +"\n";
         }

@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Restrictions info Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 392152872672882183, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
+      propertyPath: m_Size.z
+      value: 1.84
+      objectReference: {fileID: 0}
     - target: {fileID: 392152872672882424, guid: ee17a2a4e01d4054d9766c5338dc96e4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
